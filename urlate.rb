@@ -9,6 +9,7 @@ helpers do
 
   def login(user)
     @current_user = user
+    puts user
     session[:current_user] = user.id
     redirect "/"
   end
@@ -60,9 +61,9 @@ end
 
 post "/session/new" do
   @login_attempt = User.first({ :username => params[:user]["username"]})
-  p @login_attempt
+  #p @login_attempt
 
-  if @login_attempt && login_attempt.password == params[:user]["password"]
+  if @login_attempt && @login_attempt.password == params[:user]["password"]
     login(@login_attempt)
   else
     "Need to come back to this"
