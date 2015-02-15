@@ -14,5 +14,6 @@ As a user, I want to be able to like a fine
 As a user, I want to be able to comment
 As a user, I want to compare the pot to something
 
-v.30
+v.3.0
 As an admin, I want to be able to support multiple groups of users.
+As an admin, I want to be able to email late records into the app.
